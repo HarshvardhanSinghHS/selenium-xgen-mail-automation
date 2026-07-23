@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowserSuite" parallel="false" thread-count="1">
+	<listeners>
+		<listener class-name="com.xgenplus.listeners.RetryListener" />
+	</listeners>
+
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.xgenplus.tests.LoginTest" />
+			<class name="com.xgenplus.tests.ForgotEmailTest" />
+			<class name="com.xgenplus.tests.ForgotPasswordTest" />
+			<class name="com.xgenplus.tests.ComposeMailTest" />
+
+		</classes>
+
+	</test>
+
+	<!--
+	
+	<test name="FirefoxTest">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.autoseat.tests.LoginTest" />
+		</classes>
+	</test> 
+
+	<test name="EdgeTest">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.autoseat.tests.LoginTest" />
+		</classes>
+	</test> 
+	
+	-->
+</suite> 
+
